@@ -665,6 +665,9 @@ main {
   min-height: 220px;
 }
 @media (max-width: 1060px) {
+  #case-005.case-featured {
+    grid-template-columns: 1fr;
+  }
   #case-005 .cf-figure {
     min-height: 200px;
   }
