@@ -1376,7 +1376,7 @@ button[type="submit"]:hover {
 #about-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 190;
+  z-index: 210;
   background: rgba(4, 8, 14, 0.6);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
@@ -1393,7 +1393,7 @@ button[type="submit"]:hover {
   position: fixed;
   top: 0; left: 0; bottom: 0;
   width: 480px;
-  z-index: 200;
+  z-index: 220;
   background: var(--bg);
   border-right: 1px solid var(--border);
   box-shadow: 8px 0 40px rgba(0, 0, 0, 0.15);
