@@ -29,6 +29,20 @@
     if (e.key === 'Escape') closePanel();
   });
 
+  /* Swipe-left-to-close (touch devices) */
+  if (panel) {
+    var touchStartX = 0, touchStartY = 0;
+    panel.addEventListener('touchstart', function (e) {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+    panel.addEventListener('touchend', function (e) {
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      var dy = e.changedTouches[0].clientY - touchStartY;
+      if (dx < -60 && Math.abs(dx) > Math.abs(dy) * 2) closePanel();
+    }, { passive: true });
+  }
+
   /* ── Scroll reveal ──────────────────────────────────────────── */
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
