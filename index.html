@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Johnson Taiwo — Data Analyst</title>
   <meta name="description" content="Johnson Taiwo — Data Analyst with hands-on experience in BI dashboards, data pipelines, and SQL/Python/Tableau/AWS analytics.">
-  <link rel="icon" type="image/png" href="images/Dp.PNG">
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Johnson Taiwo — Data Analyst">
@@ -17,9 +17,13 @@
   <meta name="twitter:description" content="Data Analyst with hands-on experience in BI dashboards, data pipelines, and SQL/Python/Tableau/AWS analytics.">
   <meta name="twitter:image" content="images/Dp.PNG">
 
-  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fetch the icon fonts and hero background early instead of waiting for the CSS to ask -->
+  <link rel="preload" href="assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/bg.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
@@ -35,9 +39,9 @@
 
       <!-- Identity -->
       <div class="ap-hero">
-        <img loading="lazy" src="images/Dp.PNG" alt="Johnson Taiwo" class="ap-photo">
+        <img loading="lazy" decoding="async" src="images/Dp.webp" alt="Johnson Taiwo" class="ap-photo">
         <h2 class="ap-name">Johnson Taiwo</h2>
-        <p class="ap-role">Data Analyst &nbsp;·&nbsp; System Management</p>
+        <p class="ap-role">Data Analyst &nbsp;·&nbsp; Product Analytics</p>
         <span class="ap-avail"><i class="fas fa-circle"></i>&ensp;Open to Opportunities</span>
         <a href="docs/Johnson Taiwo Data Analyst .pdf" class="ap-cv-btn" download>
           <i class="fas fa-download"></i>&ensp;Download CV
@@ -49,8 +53,8 @@
       <!-- About -->
       <div class="ap-section">
         <span class="ap-label">About Me</span>
-        <p> I'm a Data Analyst with practical experience delivering business intelligence insights, developing
-            dashboards, and building data pipelines. Proficient in SQL, Python, Tableau, and AWS, with experience
+        <p> I'm a Data Analyst with practical experience in product analytics, delivering business intelligence insights, developing
+            dashboards, and building data pipelines. Proficient in SQL, Python, Tableau, AWS, Grafana Cloud, and GitHub, with experience
             supporting strategic decision-making through data analysis and reporting.</p>
       </div>
 
@@ -85,6 +89,7 @@
         <span class="ap-label">Expertise</span>
         <div class="ap-tags">
           <span>Data Analysis</span>
+          <span>Product Analytics</span>
           <span>Business Intelligence</span>
           <span>Predictive Modeling</span>
           <span>Data Pipelines</span>
@@ -139,10 +144,10 @@
         </span>
 
         <div class="hero-photo">
-          <img src="images/Dp.PNG" alt="Johnson Taiwo">
+          <img src="images/Dp.webp" alt="Johnson Taiwo" fetchpriority="high">
         </div>
 
-        <p class="hero-label">Data Analyst &ensp;·&ensp; System Management</p>
+        <p class="hero-label">Data Analyst &ensp;·&ensp; Product Analytics</p>
 
         <h1 class="hero-name">
           <span>Johnson</span>
@@ -155,9 +160,9 @@
         </p>
 
         <div class="hero-stats">
-          <div class="hstat"><b data-count="5">5</b><span>Case Files</span></div>
+          <div class="hstat"><b data-count="6">6</b><span>Case Files</span></div>
           <div class="hstat-sep"></div>
-          <div class="hstat"><b data-count="6" data-suffix="+">6+</b><span>Tools</span></div>
+          <div class="hstat"><b data-count="7" data-suffix="+">7+</b><span>Tools</span></div>
           <div class="hstat-sep"></div>
           <div class="hstat"><b data-count="2">2</b><span>Domains</span></div>
         </div>
@@ -184,23 +189,75 @@
         <div class="act-center">
           <span class="act-roman">I</span>
           <span class="act-name">The Data Chronicles</span>
-          <span class="act-desc">Four cases. One mission: turn raw data into decisions that matter.</span>
+          <span class="act-desc">Six cases. One mission: turn raw data into decisions that matter.</span>
         </div>
         <div class="act-line"></div>
       </div>
 
-      <!-- ── CASE 001 — Featured (image left, content right) ─────── -->
-      <article class="case-featured reveal" id="case-001">
+      <!-- ── CASES 001 · 002 — Duo (one open, one waiting) ──────── -->
+      <div class="case-duo reveal">
+
+      <!-- Case 001 — SFx Lite Product Analytics -->
+      <article class="case-featured duo-card is-active" id="case-001">
         <figure class="cf-figure">
-          <img loading="lazy" src="images/Data.jpg" alt="Data Wrangling & Visual Exploration">
+          <img loading="lazy" decoding="async" src="images/sfx.webp" alt="SFx Lite product analytics and live metrics">
           <div class="cf-fig-overlay"></div>
           <div class="cf-fig-label">
             <span class="big-num">01</span>
-            <span class="fig-tag">Data Wrangling</span>
+            <span class="fig-tag">Product Analytics</span>
+          </div>
+          <div class="duo-peek">
+            <span class="duo-peek-kicker">The latest case</span>
+            <span class="duo-peek-title">Product Analytics &amp; Live Metrics</span>
+            <span class="duo-peek-cta">Open case <i class="fas fa-arrow-right"></i></span>
           </div>
         </figure>
         <div class="cf-body">
-          <span class="eyebrow">Case File · 001</span>
+          <span class="eyebrow">Case File · 001 &nbsp;·&nbsp; SFx – Sora Financial Tech</span>
+          <h2 class="case-h">Product Analytics &amp; Live Metrics, SFx Lite</h2>
+          <p class="tech-stack">TypeScript &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; SQL Views &nbsp;·&nbsp; Grafana Cloud &nbsp;·&nbsp; GitHub</p>
+          <div class="beats">
+            <div class="beat">
+              <span class="beat-tag">Brief</span>
+              <p>SFx Lite, a fintech product, had users moving through the app but no way to see them. My job: build the analytics layer from nothing, so every number traces back to a real user action.</p>
+            </div>
+            <div class="beat">
+              <span class="beat-tag">Build</span>
+              <p>In four weeks I designed the event taxonomy and tracking pipeline, instrumented the core user flows, and shipped the first product dashboard on Grafana Cloud. Events are validated, stored, and rolled up by SQL views into funnels, cohorts, and KPIs, then extended with admin KYC review tracking and chatbot cost monitoring.</p>
+            </div>
+            <div class="beat">
+              <span class="beat-tag">Discovery</span>
+              <p>The funnel told the story end to end: <strong>23 signups → 15 completed KYC → 7 made a first transaction</strong>, a 30% signup-to-first-transaction rate. Weekly cohorts tracked KYC, deposit, and first-transaction rates, while chatbot spend held at about <strong>$0.12</strong> to date.</p>
+            </div>
+            <div class="beat">
+              <span class="beat-tag">Twist</span>
+              <p>Then the data caught something nobody had reported. A spike in chatbot failures traced back to a missing API key in the deployed environment. The analytics work had surfaced a live production issue.</p>
+            </div>
+            <div class="beat">
+              <span class="beat-tag">Next</span>
+              <p>The story continues on the main product: I'm now extending the tracking to the SFx Money app.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 002 — Green Cart -->
+      <article class="case-featured duo-card" id="case-002">
+        <figure class="cf-figure">
+          <img loading="lazy" decoding="async" src="images/Data.webp" alt="Data Wrangling & Visual Exploration">
+          <div class="cf-fig-overlay"></div>
+          <div class="cf-fig-label">
+            <span class="big-num">02</span>
+            <span class="fig-tag">Data Wrangling</span>
+          </div>
+          <div class="duo-peek">
+            <span class="duo-peek-kicker">Where it started</span>
+            <span class="duo-peek-title">The Sales Data Puzzle</span>
+            <span class="duo-peek-cta">Open case <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </figure>
+        <div class="cf-body">
+          <span class="eyebrow">Case File · 002</span>
           <h2 class="case-h">The Sales Data Puzzle</h2>
           <p class="tech-stack">SQL &nbsp;·&nbsp; Python &nbsp;·&nbsp; Power BI &nbsp;·&nbsp; Excel</p>
           <div class="beats">
@@ -232,23 +289,25 @@
         </div>
       </article>
 
+      </div>
+
       <!-- ── Thread ───────────────────────────────────────────────── -->
       <p class="thread reveal">
         With the sales story told, a harder question surfaced —
         <em>could the underlying data itself even be trusted?</em>
       </p>
 
-      <!-- ── CASES GRID: 002 · 003 · 004 ──────────────────────────── -->
+      <!-- ── CASES GRID: 003 · 004 · 005 ──────────────────────────── -->
       <div class="cases-grid">
 
-        <!-- Case 002 -->
-        <article class="case-card reveal" id="case-002">
+        <!-- Case 003 -->
+        <article class="case-card reveal" id="case-003">
           <figure class="cc-fig">
-            <img loading="lazy" src="images/BI.jpg" alt="Data Cleaning & Quality">
-            <div class="cc-overlay"><span class="big-num">02</span></div>
+            <img loading="lazy" decoding="async" src="images/BI.webp" alt="Data Cleaning & Quality">
+            <div class="cc-overlay"><span class="big-num">03</span></div>
           </figure>
           <div class="cc-body">
-            <span class="eyebrow">Case File · 002</span>
+            <span class="eyebrow">Case File · 003</span>
             <h3 class="case-h">The Clean Slate</h3>
             <p class="tech-stack">SQL &nbsp;·&nbsp; Python &nbsp;·&nbsp; Excel</p>
             <p class="cc-story">The BI team needed a full quality audit on customer sign-up data before the Monthly Business Review. I uncovered integrity failures, mapped sign-up trends, and exposed demographic patterns that completely rewired the marketing team's approach.</p>
@@ -258,14 +317,14 @@
           </div>
         </article>
 
-        <!-- Case 003 -->
-        <article class="case-card reveal reveal-delay-1" id="case-003">
+        <!-- Case 004 -->
+        <article class="case-card reveal reveal-delay-1" id="case-004">
           <figure class="cc-fig">
-            <img loading="lazy" src="images/Statistic.jpg" alt="Statistics & Predictive Modeling">
-            <div class="cc-overlay"><span class="big-num">03</span></div>
+            <img loading="lazy" decoding="async" src="images/Statistic.webp" alt="Statistics & Predictive Modeling">
+            <div class="cc-overlay"><span class="big-num">04</span></div>
           </figure>
           <div class="cc-body">
-            <span class="eyebrow">Case File · 003</span>
+            <span class="eyebrow">Case File · 004</span>
             <h3 class="case-h">The Churn Problem</h3>
             <p class="tech-stack">Python &nbsp;·&nbsp; Statistics &nbsp;·&nbsp; ML</p>
             <p class="cc-story">StreamWorks Media was losing subscribers. I built predictive models that scored individual churn probability, identified the exact behavioral triggers driving departure, and delivered a targeted retention playbook to reverse the trend.</p>
@@ -280,14 +339,14 @@
           </div>
         </article>
 
-        <!-- Case 004 -->
-        <article class="case-card reveal reveal-delay-2" id="case-004">
+        <!-- Case 005 -->
+        <article class="case-card reveal reveal-delay-2" id="case-005">
           <figure class="cc-fig">
-            <img loading="lazy" src="images/KPI.png" alt="Tableau Interactive BI">
-            <div class="cc-overlay"><span class="big-num">04</span></div>
+            <img loading="lazy" decoding="async" src="images/KPI.webp" alt="Tableau Interactive BI">
+            <div class="cc-overlay"><span class="big-num">05</span></div>
           </figure>
           <div class="cc-body">
-            <span class="eyebrow">Case File · 004</span>
+            <span class="eyebrow">Case File · 005</span>
             <h3 class="case-h">The Executive View</h3>
             <p class="tech-stack">Tableau &nbsp;·&nbsp; Power BI</p>
             <p class="cc-story">TechHub Retail needed live KPIs across all products, regions, and segments for 2025 planning. I designed an interactive Tableau dashboard delivering real-time metrics, trend forecasts, and executive-ready insight at a glance.</p>
@@ -305,18 +364,18 @@
         <em>It was time to make the pipeline run itself.</em>
       </p>
 
-      <!-- ── CASE 005 — Featured (AWS Pipeline) ──────────────────── -->
-      <article class="case-featured reveal" id="case-005">
+      <!-- ── CASE 006 — Featured (AWS Pipeline) ──────────────────── -->
+      <article class="case-featured case-wide reveal" id="case-006">
         <figure class="cf-figure">
-          <img loading="lazy" src="images/Data-auto.jpg" alt="AWS Sales Data Pipeline Automation">
+          <img loading="lazy" decoding="async" src="images/Data-auto.webp" alt="AWS Sales Data Pipeline Automation">
           <div class="cf-fig-overlay"></div>
           <div class="cf-fig-label">
-            <span class="big-num">05</span>
+            <span class="big-num">06</span>
             <span class="fig-tag">Cloud Pipeline</span>
           </div>
         </figure>
         <div class="cf-body">
-          <span class="eyebrow">Case File · 005</span>
+          <span class="eyebrow">Case File · 006</span>
           <h2 class="case-h">The Automated Pipeline</h2>
           <p class="tech-stack">AWS S3 &nbsp;·&nbsp; Glue (PySpark) &nbsp;·&nbsp; Lambda &nbsp;·&nbsp; IAM &nbsp;·&nbsp; Docker</p>
           <div class="beats">
@@ -341,7 +400,7 @@
 
       <!-- ── Thread ───────────────────────────────────────────────── -->
       <p class="thread reveal">
-        The data pipeline runs itself — three more case files are being written.
+        The pipeline runs itself, and the SFx story is still being written.
         <em>The next chapter is in progress.</em>
       </p>
 
@@ -354,9 +413,9 @@
 
         <div class="scard scard-1">
           <div class="scard-fig">
-            <img loading="lazy" src="images/A1.jpg" alt="Airline Check-in System">
+            <img loading="lazy" decoding="async" src="images/A1.webp" alt="Airline Check-in System">
           </div>
-          <span class="scard-num">06</span>
+          <span class="scard-num">07</span>
           <span class="eyebrow">System Development</span>
           <h3 class="scard-title">The Check-in System</h3>
           <p class="scard-stack">System Design &nbsp;·&nbsp; UML &nbsp;·&nbsp; Database Design</p>
@@ -365,17 +424,17 @@
 
         <div class="scard scard-2">
           <div class="scard-fig">
-            <img loading="lazy" src="images/sfx.png" alt="SFx – Sora Financial Tech Data Analytics">
+            <img loading="lazy" decoding="async" src="images/sfx.webp" alt="SFx Money app product analytics">
           </div>
-          <span class="scard-num">07</span>
-          <span class="eyebrow">Data Analyst Intern at SFx – Sora Financial Tech</span>
-          <h3 class="scard-title">Data analytics </h3>
-          <p class="scard-stack">TypeScript &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; Event Taxonomy v1 &nbsp;·&nbsp; Tracking Utility </p>
+          <span class="scard-num">08</span>
+          <span class="eyebrow">Product Analytics · SFx Money</span>
+          <h3 class="scard-title">The Main Product</h3>
+          <p class="scard-stack">Event Tracking &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Grafana Cloud</p>
           <span class="scard-status"><i class="fas fa-circle coming-dot"></i>&ensp;In Progress</span>
         </div>
 
         <div class="scard scard-3">
-          <span class="scard-num">08</span>
+          <span class="scard-num">09</span>
           <span class="eyebrow">SIEM · Analytics</span>
           <h3 class="scard-title">The Threat Dashboard</h3>
           <p class="scard-stack">Splunk &nbsp;·&nbsp; Log Analysis &nbsp;·&nbsp; Power BI</p>
@@ -421,6 +480,16 @@
           <i class="fab fa-aws tool-ic"></i>
           <span class="tool-name">AWS Cloud</span>
           <span class="tool-desc">S3 · Glue · Lambda · Docker</span>
+        </div>
+        <div class="tool">
+          <i class="fas fa-tachometer-alt tool-ic"></i>
+          <span class="tool-name">Grafana Cloud</span>
+          <span class="tool-desc">Live Metrics · Monitoring · Dashboards</span>
+        </div>
+        <div class="tool">
+          <i class="fab fa-github tool-ic"></i>
+          <span class="tool-name">GitHub</span>
+          <span class="tool-desc">Version Control · DevOps · Collaboration</span>
         </div>
       </div>
 
@@ -518,13 +587,13 @@
 
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Johnson Taiwo</span>
+        <span>&copy; 2026 Johnson Taiwo</span>
         <a href="https://github.com/thejshn" target="_blank" rel="noopener">Built by JSHN</a>
       </div>
     </footer>
 
   </div>
 
-  <script src="assets/js/portfolio.js"></script>
+  <script src="assets/js/portfolio.js" defer></script>
 </body>
 </html>
