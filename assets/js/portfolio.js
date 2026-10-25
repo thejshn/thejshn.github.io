@@ -115,6 +115,71 @@
     });
   }
 
+  /* ── Case duo: open one featured case, the other waits ──────── */
+  document.querySelectorAll('.case-duo').forEach(function (duo) {
+    var cards = Array.from(duo.querySelectorAll('.duo-card'));
+    function sync() {
+      cards.forEach(function (c) {
+        var active = c.classList.contains('is-active');
+        c.setAttribute('aria-expanded', active ? 'true' : 'false');
+        if (active) { c.removeAttribute('role'); c.removeAttribute('tabindex'); }
+        else { c.setAttribute('role', 'button'); c.setAttribute('tabindex', '0'); }
+      });
+    }
+    var switching = false;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function swap(card) {
+      cards.forEach(function (c) { c.classList.toggle('is-active', c === card); });
+      sync();
+    }
+    function open(card) {
+      if (switching || card.classList.contains('is-active')) return;
+
+      /* Stacked layout: swap straight away and bring the case into view */
+      if (window.innerWidth <= 1060 || reduceMotion) {
+        swap(card);
+        if (window.innerWidth <= 1060) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        return;
+      }
+
+      /* Side by side: fade the story out, slide the widths with the text
+         out of layout, then ease the row to its new height as the new
+         story fades in */
+      switching = true;
+      var from = duo.offsetHeight;
+      duo.style.height = from + 'px';
+      duo.classList.add('is-switching');
+      setTimeout(function () {
+        duo.classList.add('is-resizing');
+        swap(card);
+        setTimeout(function () {
+          duo.classList.remove('is-resizing', 'is-switching');
+          duo.style.height = 'auto';
+          var to = duo.offsetHeight;
+          duo.style.height = from + 'px';
+          void duo.offsetHeight;
+          duo.style.height = to + 'px';
+          setTimeout(function () {
+            duo.style.height = '';
+            switching = false;
+          }, 260);
+        }, 380);
+      }, 100);
+    }
+    cards.forEach(function (card) {
+      card.addEventListener('click', function () { open(card); });
+      card.addEventListener('keydown', function (e) {
+        if ((e.key === 'Enter' || e.key === ' ') && !card.classList.contains('is-active')) {
+          e.preventDefault();
+          open(card);
+        }
+      });
+    });
+    sync();
+  });
+
   /* ── Typewriter ─────────────────────────────────────────────── */
   var typedEl  = document.getElementById('hero-typed');
   if (typedEl) {
